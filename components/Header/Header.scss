@@ -1,0 +1,48 @@
+header{
+    padding: $gapS;
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    letter-spacing: $letterSpacingL;
+    width: calc(100% - 152px);
+
+    &.onEventPage{
+        // background-color: $highlightColor1;
+    }
+
+    &.soundSettings{
+        text-align: right;
+        justify-content: right;
+        width: 152px;
+        position: fixed;
+        top: 0;
+        left: auto;
+        right: 0;
+        z-index: 300;
+    }
+}
+
+
+.indicator{
+    margin: 3px 4px 0 1px;
+    width: $indicatorRadius;
+    height: $indicatorRadius;
+    border-radius: $indicatorRadius;
+    border: $indicatorBorderWidth solid $highlightColor1;
+}
+
+.onEventPage{
+    .indicator{
+        border: $indicatorBorderWidth solid $backgroundColor;
+    }
+}
+
+.menuItem, .soundSetting{
+    // text-transform: uppercase !important;
+    padding-right: $gapM;
+}

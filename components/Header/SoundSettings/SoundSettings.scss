@@ -1,0 +1,34 @@
+.soundSettings, .soundSetting{
+    display: flex;
+    font-size: $fontSizeS;
+}
+
+.soundSetting{
+
+    &:last-of-type{
+        padding: 0;
+    }
+
+    .indicator{
+        border-color: $highlightColor1;
+        &.active{
+            background-color: $highlightColor1;
+        }
+    }
+
+    .soundSettingLabel{
+        // text-transform: uppercase;
+    }
+}
+
+.onEventPage{
+    .soundSetting{
+        .indicator{
+            border-color: $backgroundColor;
+            &.active{
+                background-color: $backgroundColor;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,203 @@
+main {
+  padding-top: $gapL;
+  padding-bottom: $playerHeight;
+  text-align: center;
+  min-height: 100vh;
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+
+.title {
+  // display: inline-block;
+  // width: auto;
+  font-size: $fontSizeM;
+  padding: $gapS $gapXL;
+  margin: $gapS $gapL;
+  border: $borderWidthL solid $highlightColor1;
+  color: $highlightColor1;
+  max-width: $maxWidthM;
+
+  @media screen and (min-width: 600px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.description,
+.info,
+.textWithTitle,
+.caption,
+.text {
+  padding: $gapS $gapS 0 $gapS;
+  font-size: $fontSizeL;
+  // text scaling
+  transform-origin: center center;
+  transform: scaleX($fontStretch);
+  margin-left: -90px;
+  margin-right: -90px;
+  line-height: $lineHeightText;
+
+  // text scaling hack
+  @media screen and (max-width: 600px) {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+  // @media screen and (min-width: 600px) {
+  // margin-left: auto;
+  // margin-right: auto;
+  // }
+
+  // sound-reactive text transformation
+  letter-spacing: calc(var(--volume_0-10) * 1px + 0.5px);
+
+  // // sound-reactive text transformation
+  // -webkit-text-stroke-width: calc( var(--volume_0-10) * var(--strokeWidthMultiplicator) );
+  // -webkit-text-stroke-color: $highlightColor1;
+}
+
+.description {
+  padding: $gapM $gapM $gapL $gapM;
+}
+
+.info,
+.caption {
+  padding: 0 $gapS 0 $gapS; // fix me
+  margin-top: -4px; // fix me
+  letter-spacing: 0.5px; // fix me
+  transform: scaleX($fontStretch) skew(calc(var(--volume_0-100) * -1deg));
+
+  // // sound-reactive text transformation
+  // -webkit-text-stroke-width: calc( var(--volume_0-10) * var(--strokeWidthMultiplicator));
+  // -webkit-text-stroke-color: $highlightColor1;
+}
+
+.imageWrapper .caption {
+  padding-top: $gapXL;
+  // font-size: $fontSizeXS;
+  // padding-bottom: $gapS;
+  // // max-width: $maxWidthM;
+  // color: $highlightColor1;
+}
+
+.subtitle {
+  font-size: $fontSizeL;
+  color: $highlightColor1;
+  padding: $gapL;
+}
+
+.subtitle,
+.title {
+  letter-spacing: $letterSpacingL;
+}
+
+.image,
+.startPageImage,
+.shape {
+  padding: $gapS $gapS 0 $gapS; // fix me: hacky padding for overlay bc of centering through margin auto
+  position: relative;
+  z-index: 0;
+  max-width: $maxWidthM;
+  margin-left: auto;
+  margin-right: auto;
+
+  .colorOverlay {
+    margin: $gapS $gapS 0 $gapS; // fix me: hacky padding for overlay bc of centering through margin auto
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 100%;
+    height: calc(
+      100% - var(--gapS)
+    ); // fix me: hacky padding for overlay bc of centering through margin auto
+    max-width: $maxWidthM;
+    background-color: $highlightColor1;
+    opacity: 100%;
+    mix-blend-mode: multiply;
+    transition: opacity 0.3s ease;
+
+    @media screen and (max-width: 600px) {
+      & {
+        left: calc(
+          50% - var(--gapS)
+        ); // fix me: hacky padding for overlay bc of centering through margin auto
+        width: calc(
+          100% - (var(--gapS) * 2)
+        ); // fix me: hacky padding for overlay bc of centering through margin auto
+      }
+    }
+  }
+
+  img {
+    max-width: $maxWidthM;
+    height: auto;
+    width: auto;
+    vertical-align: top;
+    filter: brightness(calc(var(--volume_75-300) * 1%)) grayscale(100%)
+      contrast(5000%);
+    -webkit-filter: brightness(calc(var(--volume_75-300) * 1%)) grayscale(100%)
+      contrast(5000%);
+    transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+
+    @media screen and (max-width: 600px) {
+      & {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.shape {
+  margin-top: $gapXL;
+}
+
+.image {
+  // show original image on hover
+  &:hover {
+    .colorOverlay {
+      opacity: 0%;
+    }
+
+    img {
+      filter: brightness(100%) grayscale(0%) contrast(100%);
+      -webkit-filter: brightness(100%) grayscale(0%) contrast(100%);
+    }
+  }
+}
+
+// event page styling
+.eventPage {
+  background-color: $highlightColor1;
+}
+.onEventPage {
+  // background-color: $highlightColor1;
+
+  .title {
+    color: $textColor;
+    border-color: $textColor;
+  }
+  .description {
+    color: $backgroundColor;
+    font-size: $fontSizeXL;
+    // // // sound-reactive text transformation
+    // letter-spacing: 0.5px;
+
+    // // // sound-reactive text transformation
+    // -webkit-text-stroke-width: calc( var(--volume_0-10) * var(--strokeWidthMultiplicatorL) );
+    // -webkit-text-stroke-color: $backgroundColor;
+  }
+
+  .colorOverlay {
+    background-color: $backgroundColor;
+  }
+
+  .info,
+  .caption {
+    // // sound-reactive text transformation
+    // -webkit-text-stroke-color: $backgroundColor;
+  }
+}

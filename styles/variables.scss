@@ -1,0 +1,108 @@
+// gap
+$gapXS: 2px;
+$gapS: 5px;
+$gapM: 10px;
+$gapL: 15px;
+$gapXL: 20px;
+// double variables for css calculating reasons
+:root{
+    --gapS: 5px;
+    --gapM: 10px;
+}
+
+// hover
+$hoverOpacity: 0.5;
+// $colorHover: rgb(70, 70, 70);
+
+// player
+$playerHeight: 80px + $gapS;
+
+// border
+$borderWidth: 1px;
+$borderWidthL: 2px;
+
+// indicator
+$indicatorRadius: 0.69em;
+$indicatorBorderWidth: $borderWidth;
+
+// fonts
+// $fontSizeS: 16px;
+$fontSizeS: 20px;
+$fontSizeXS: $fontSizeS; // alt: 12.5px
+$fontSizeM: 35px;
+$fontSizeL: 40px;
+$fontSizeXL: 60px;
+$fontStretch: 0.75;
+$lineHeightGreatFarmer: 0.6;
+$lineHeightTimes: 1.1;
+$lineHeightText: 1;
+// $fontStretchMarginReduction: -16.5%;
+// $fontStretchMarginReduction: -100px;
+$letterSpacingL: 2.5px;
+
+// text
+$maxWidthS: 300px;
+$maxWidthM: 600px;
+$maxWidthL: 800px;
+// $maxWidthM: 1000px;
+
+// player
+$playerTrackHeight: 10px;
+$playerHeight: 47px;
+$playerHeightMinusTrackHeight: calc((47px - 10px + 5px) * -1);
+// $playerHeightMinusTrackHeight: calc(100% - 10px);
+$playlistHeight: calc(100% - 47px);
+
+// text transform
+$strokeWidthMultiplicator: 1px; // alt: 10px
+// double variables for easier js implementing reasons
+:root{
+    --strokeWidthMultiplicatorS: 0.5px;
+    --strokeWidthMultiplicator: 1px;
+    --strokeWidthMultiplicatorL: 10px;
+    --volume_0-10_defaultValue: 0;
+    --volume_0-10: var(--volume_0-10_defaultValue); 
+    --volume_60-110_defaultValue: 60;
+    --volume_60-110: var(--volume_60-110_defaultValue);
+    --volume_75-300_defaultValue: 100;
+    --volume_75-300: var(--volume_75-300_defaultValue);
+    --volume_190-75: var(--volume_190-75_defaultValue);
+    --volume_190-75_defaultValue: 190;
+    --volume_100-300_defaultValue: 190;
+    --volume_100-300: var(--volume_100-300_defaultValue);
+    --volume_0-100_defaultValue: 0;
+    --volume_0-100: var(--volume_0-100_defaultValue);
+    --volume_0-10_defaultValue: 0;
+    --volume_0-10: var(--volume_0-10_defaultValue);
+    --volume_0-1_defaultValue: 0;
+    --volume_0-1: var(--volume_0-1_defaultValue);
+    --volume_1-10_defaultValue: 1;
+    --volume_1-10: var(--volume_1-10_defaultValue);
+    --volume_1-5_defaultValue: 1;
+    --volume_1-5: var(--volume_1-5_defaultValue);
+    --volume_1_-1_defaultValue: 1;
+    --volume_1_-1: var(--volume_1_-1_defaultValue);
+    --volume_1_-10_defaultValue: 1;
+    --volume_1_-10: var(--volume_1_-10_defaultValue);
+    --volume_1-0_defaultValue: 1;
+    --volume_1-0: var(--volume_1-0_defaultValue);
+    --volume_10-0_defaultValue: 10;
+    --volume_10-0: var(--volume_10-0_defaultValue);
+    --volume_100-0_defaultValue: 100;
+    --volume_100-0: var(--volume_100-0_defaultValue);
+    --volume_1-5_fontStretching_defaultValue: 0.75;
+    --volume_1-5_fontStretching: var(--volume_1-5_fontStretching_defaultValue);
+    --volume_1_-10_fontStretching_defaultValue: 0.75;
+    --volume_1_-10_fontStretching: var(--volume_1_-10_fontStretching_defaultValue);
+}
+
+// colors
+$textColor: #000000;
+// $backgroundColor: #6D6E70;
+// $colorHover: #6D6E70;
+// $backgroundColor: #58595b;
+$colorHover: #58595b;
+$backgroundColor: #464749;
+$highlightColor1: #EE4036;
+$highlightColor2: #EE4036;
+

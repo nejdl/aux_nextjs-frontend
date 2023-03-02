@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'GreatFarmer';
+    src: url('/assets/fonts/GreatFarmer.ttf') format('ttf'),
+        url('/assets/fonts/GreatFarmer.woff2') format('woff2'),
+        url('/assets/fonts/GreatFarmer.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'JHA Times Now SemiLight';
+    src: url('/assets/fonts/TimesNow-SemiLight.otf') format('otf'),
+        url('/assets/fonts/TimesNow-SemiLight.woff2') format('woff2'),
+        url('/assets/fonts/TimesNow-SemiLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

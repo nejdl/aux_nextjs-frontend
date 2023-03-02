@@ -1,0 +1,39 @@
+.react-jinke-music-player-main{
+    display: none;
+    letter-spacing: $letterSpacingL;
+    
+    .audio-lists-num{
+        letter-spacing: 0;
+    }
+
+    .audio-title{
+        // transform: scaleX($fontStretch);
+        // margin-left: -28px;
+        // margin-right: -28px;
+    }
+    
+    .current-time, .duration{
+        // transform: scaleX($fontStretch) !important;
+        
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    .progress-bar-content{
+        justify-content: space-between;
+    }
+
+    &.show{
+        display: block;
+
+        .music-player-panel{
+            &.collapsed{   
+                @media (hover: hover) {
+                    bottom: $playerHeightMinusTrackHeight !important;
+                }
+            }
+        }
+    }
+    
+}

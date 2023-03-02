@@ -1,0 +1,108 @@
+.navigation, .mobileMenu{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: $fontSizeS;
+    
+    .menuItem{
+
+        &.active{
+            color: $highlightColor2;
+        }
+    }
+
+    .logo{
+        display: flex;
+        &.active{
+            color: inherit;
+            color: $highlightColor2;
+
+            .letter.active {
+                color: $textColor;
+            }
+        }
+        .letter.active {
+            color: $highlightColor2;
+        }
+    }
+
+    .menuItemPage{
+        text-transform: lowercase;
+    }
+    
+    .menuItemEvent{
+        display: flex;
+        // align-items: center;
+              
+        .indicator{
+            // border: none;
+        }
+        
+        &.published{
+            .indicator{
+                background-color: $highlightColor1;
+            }            
+        }
+        
+        &.unpublished{
+            .date{
+                // opacity: $hoverOpacity;
+            }
+            pointer-events: none;
+            
+            .indicator{
+                // background-color: $highlightColor2;
+            }            
+        }
+    }
+}
+
+// mobile menu
+.mobileMenu{
+    width: calc(100vw - var(--gapM));
+    
+    &.hidden{
+        display: none;
+        
+    }
+}
+
+.mobileMenuButton{
+    cursor: pointer;
+
+    &.active{
+        color: $highlightColor1;
+    }
+}
+
+// event page
+.onEventPage{
+    .navigation{
+        .menuItem{
+            &.active{
+                color: $backgroundColor;
+            }
+        }
+    
+        .logo{
+            &.active{
+                color: $backgroundColor;
+    
+                .letter.active {
+                    color: $textColor;
+                }
+            }
+            .letter.active {
+                color: $backgroundColor;
+            }
+        }
+        
+        .menuItemEvent{  
+            &.published{
+                .indicator{
+                    background-color: $backgroundColor;
+                }            
+            }
+        }
+    }
+}

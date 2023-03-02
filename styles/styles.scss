@@ -1,0 +1,100 @@
+// GENERAL
+@import './variables.scss';
+@import './fonts.scss';
+
+// HEADER
+@import '../components/Header/Header.scss';
+@import '../components/Header/Menu/Menu.scss';
+@import '../components/Header/SoundSettings/SoundSettings.scss';
+
+// CONTENT
+@import '../components/Content/Content.scss';
+
+// PAGES
+@import './pages/info.scss';
+@import './pages/index.scss';
+@import './pages/404.scss';
+
+
+// PLAYER
+@import '../components/Player/Player.scss';
+@import '../components/Player/PlayerDefaults.scss';
+
+// GENERAL STYLES
+html,
+body {
+  // background-color: $backgroundColor;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: $textColor;
+  font-family: 'JHA Times Now SemiLight';
+  line-height: $lineHeightTimes;
+  overflow-x: hidden;
+}
+
+body{
+  background-color: $backgroundColor;
+}
+
+* {
+  box-sizing: border-box;
+  // border: 1px solid black;
+}
+
+// LISTS
+ul:first-of-type, ol:first-of-type{
+  margin-top: 0;
+}
+
+ol, ul{
+  margin: 0;
+  padding: 0;
+}
+
+ol *, ul * {
+  text-indent: 0;
+}
+
+// TEXT
+p{
+  margin: 0;
+  // margin-bottom: $gapS;
+}
+
+::selection {
+  // background: $textColor;
+  // color: $highlightColor1;
+  background: $highlightColor1;
+  color: $textColor;
+}
+
+.onEventPage{
+  ::selection {
+    background: $backgroundColor;
+  }
+}
+
+// LINKS
+a, .button{
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover{
+    // opacity: $hoverOpacity;
+    color: $colorHover;
+  }
+  
+}
+
+// no selection
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
